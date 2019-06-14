@@ -1,0 +1,24 @@
+{
+  "name": "bigNewsApi",
+  "version": "1.0.0",
+  "description": "本地基础地址为 http://localhost:8000/\r 网络基础地址为:https://autumnfish.cn/big/admin/",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AutumnFish/bigNewsApi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AutumnFish/bigNewsApi/issues"
+  },
+  "homepage": "https://github.com/AutumnFish/bigNewsApi#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.9.1"
+  }
+}
