@@ -224,8 +224,7 @@
 
 #### 1、用户登录
 
-请求地址：http://localhost:8000/admin/login
-网络地址: https://autumnfish.cn/big/admin/login
+请求地址：/admin/user/login
 
 请求方式：post
 
@@ -244,8 +243,7 @@
 
 #### 2、退出登录
 
-请求地址：http://localhost:8000/admin/logout
-网络地址: https://autumnfish.cn/big/admin/logout
+请求地址：admin/user/logout
 
 请求方式：post
 
@@ -716,8 +714,7 @@
 
 #### 21、获取用户信息
 
-请求地址：http://localhost:8000/admin/userinfo_get
-网络地址: https://autumnfish.cn/big/admin/userinfo_get
+请求地址：/admin/user/info
 
 请求方式：get
 
@@ -735,8 +732,7 @@
 
 #### 22、编辑用户信息
 
-请求地址：http://localhost:8000/admin/userinfo_edit
-网络地址: https://autumnfish.cn/big/admin/userinfo_edit
+请求地址：/admin/user/info
 
 请求方式：post
 

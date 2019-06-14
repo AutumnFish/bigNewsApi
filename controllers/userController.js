@@ -1,7 +1,9 @@
 module.exports = {
   // post
   login(req,res){
-    res.send('/login')
+    // res.send('/login')
+    // 接收用户名和密码
+    const {user_name,password} = req.body
   },
   // get
   logout(req,res){
