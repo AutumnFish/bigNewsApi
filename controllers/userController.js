@@ -9,11 +9,12 @@ module.exports = {
       username,
       password,
       callback(result) {
-        console.log(result)
+        // console.log(result)
         let code, msg
         if (result) {
           code = 200
           msg = '登录成功'
+  
         } else {
           code = 400
           msg = '用户名或密码错误'

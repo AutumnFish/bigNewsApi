@@ -3,7 +3,7 @@ const connection = require('./connection')
 function execute(sql,params,callback) {
   connection.execute(
     sql,
-    [...params],
+    params,
     (err, results) => {
       if (err) {
         throw new Error(err)
