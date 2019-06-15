@@ -16,15 +16,6 @@ app.use(morgan(':method :url :status'))
 // 注册路由
 app.use(
   '/admin/user',
-  (req, res, next) => {
-    // console.log(req);
-    console.log(req.session)
-    if (req.url.indexOf('/login') == 0) {
-      next()
-    } else {
-      next()
-    }
-  },
   require('./routers/userRouter')
 )
 

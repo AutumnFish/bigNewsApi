@@ -19,7 +19,7 @@
 
 ## 前台接口(未完成)
 
-#### 1、文章搜索
+#### 1、文章搜索(未完成)
 
 请求地址：/search
 
@@ -75,7 +75,7 @@
 }
 ```
 
-#### 2、文章类型
+#### 2、文章类型(未完成)
 
 请求地址：/category
 
@@ -90,7 +90,7 @@
 | id   | number 类型 | 类别 id  |
 | name | string 类型 | 类别名称 |
 
-#### 3、热点图
+#### 3、热点图(未完成)
 
 请求地址：/hotpic
 
@@ -105,7 +105,7 @@
 | id     | number 类型 | 图片对应文章 id |
 | imgurl | string 类型 | 图片地址        |
 
-#### 4、文章热门排行
+#### 4、文章热门排行(未完成)
 
 请求地址：/rank
 
@@ -120,7 +120,7 @@
 | id    | number 类型 | 文章 id  |
 | title | string      | 文章标题 |
 
-#### 5、最新资讯
+#### 5、最新资讯(未完成)
 
 请求地址：/latest
 
@@ -141,7 +141,7 @@
 | comment | number 类型 | 评论条数         |
 | date    | string 类型 | 文章发布时间     |
 
-#### 6、最新评论
+#### 6、最新评论(未完成)
 
 请求地址：/latest_comment
 
@@ -157,9 +157,9 @@
 |   date    | string | 评论时间     |
 |   intro   | string | 评论内容截取 |
 
-#### 7、焦点关注 ？
+#### 7、焦点关注 ？(未完成)
 
-#### 8、文章详细内容
+#### 8、文章详细内容(未完成)
 
 请求地址：/artitle
 
@@ -185,7 +185,7 @@
 | prev    | array  | 上一篇文章<br />id： 上一篇文章的 id<br />title：上一篇文章的标题 |
 | next    | array  | 下一篇文章<br />id： 下一篇文章的 id<br />title：下一篇文章的标题 |
 
-#### 9、发表评论
+#### 9、发表评论(未完成)
 
 请求地址：/post_comment
 
@@ -200,7 +200,7 @@
 
 返回数据：‘发表成功’ ‘发表失败’
 
-#### 10、评论列表
+#### 10、评论列表(未完成)
 
 请求地址：/get_comment
 
@@ -249,25 +249,51 @@
 
 请求参数：无
 
-返回数据：无
+返回数据：退出成功的提示信息
 
 #### 3、获取用户信息
 
-请求地址：http://localhost:8000/admin/getuser
-网络地址: https://autumnfish.cn/big/admin/getuser
+请求地址：/admin/user/info
 
 请求方式：get
 
-请求参数：
+请求参数：无
 
 返回数据：
 
 |   名称   |  类型  | 说明         |
 | :------: | :----: | ------------ |
+| username | string | 用户名称     |
 | nickname | string | 用户昵称     |
+|  email   | string | 用户邮箱     |
 | user_pic | string | 用户图片地址 |
+| password | string | 用户密码     |
 
-#### 4、文章数量统计
+#### 4、编辑用户信息(未完成)
+
+请求地址：/admin/user/info
+
+请求方式：post
+
+请求参数：使用 formdata 提交
+
+|   名称   |  类型  | 说明         |
+| :------: | :----: | ------------ |
+| username | string | 用户名称     |
+| nickname | string | 用户昵称     |
+|  email   | string | 用户邮箱     |
+| user_pic | string | 用户图片地址 |
+| password | string | 用户密码     |
+
+返回数据：
+
+| 名称 |  类型  | 说明                           |
+| :--: | :----: | ------------------------------ |
+| msg  | string | 文字信息 ‘修改成功’ ‘修改失败’ |
+
+
+
+#### 5、文章数量统计(未完成)
 
 请求地址：http://localhost:8000/admin/article_count
 网络地址: https://autumnfish.cn/big/admin/article_count
@@ -283,7 +309,7 @@
 | all_count | number | 文章总数             |
 | day_count | number | 当天文章发布文章总数 |
 
-#### 5、评论数量统计
+#### 5、评论数量统计(未完成)
 
 请求地址：http://localhost:8000/admin/comment_count
 网络地址: https://autumnfish.cn/big/admin/comment_count
@@ -299,7 +325,7 @@
 | all_count | number | 评论总数         |
 | day_count | number | 当天发布评论总数 |
 
-#### 6、月新增文章数
+#### 6、月新增文章数(未完成)
 
 请求地址：http://localhost:8000/admin/month_article_count
 网络地址: https://autumnfish.cn/big/admin/month_article_count
@@ -343,7 +369,7 @@
 ]
 ```
 
-#### 7、各类型文章数量统计
+#### 7、各类型文章数量统计(未完成)
 
 请求地址：http://localhost:8000/admin/article_category_count
 网络地址: https://autumnfish.cn/big/admin/article_category_count
@@ -359,7 +385,7 @@
 |   type    | string | 文章类型       |
 | all_count | number | 该类型文章总数 |
 
-#### 8、月文章访问量
+#### 8、月文章访问量(未完成)
 
 请求地址：http://localhost:8000/admin/article_category_visit
 网络地址: https://autumnfish.cn/big/admin/article_category_visit
@@ -459,7 +485,7 @@
 ]
 ```
 
-#### 9、文章搜索
+#### 9、文章搜索(未完成)
 
 请求地址：http://localhost:8000/admin/search
 网络地址: https://autumnfish.cn/big/admin/search
@@ -485,7 +511,7 @@
 | page  | number | 当前页                                                                                                                                                                                                                                                                                                                                                                       |
 | data  | array  | 文章数据数组，其中每个成员包含字段：<br />id: number 类型，文章 id<br />title: string 类型，文章标题<br />intro: string 类型，文章文字内容截取<br />cover: string 类型，文章封面图片地址<br />type: string 类型，文章类型<br />read: number 类型，文章阅读次数<br />comment: number 类型，文章评论次数<br />date:string 类型， 文章发布时间<br />state:string 类型，文章状态 |
 
-#### 10、发布文章
+#### 10、发布文章(未完成)
 
 请求地址：http://localhost:8000/admin/article_publish
 网络地址: https://autumnfish.cn/big/admin/article_publish
@@ -509,7 +535,7 @@
 | :--: | :----: | ------------------------------ |
 | msg  | string | 文字信息 ‘发布成功’ ‘发布失败’ |
 
-#### 11、文章编辑
+#### 11、文章编辑(未完成)
 
 请求地址：http://localhost:8000/admin/article_edit
 网络地址: https://autumnfish.cn/big/admin/article_edit
@@ -533,7 +559,7 @@
 | :--: | :----: | ------------------------------ |
 | msg  | string | 文字信息 ‘修改成功’ ‘修改失败’ |
 
-#### 12、删除文章
+#### 12、删除文章(未完成)
 
 请求地址：http://localhost:8000/admin/article_delete
 网络地址: https://autumnfish.cn/big/admin/article_delete
@@ -552,7 +578,7 @@
 | :--: | :----: | ------------------------------ |
 | msg  | string | 文字信息 ‘删除成功’ ‘删除失败’ |
 
-#### 13、文章类别搜索
+#### 13、文章类别搜索(未完成)
 
 请求地址：http://localhost:8000/admin/category_search
 网络地址: https://autumnfish.cn/big/admin/category_search
@@ -569,7 +595,7 @@
 | name | string | 类别名称 |
 | slug | string | 别名     |
 
-#### 14、新增文章类别
+#### 14、新增文章类别(未完成)
 
 请求地址：http://localhost:8000/admin/category_add
 网络地址: https://autumnfish.cn/big/admin/category_add
@@ -589,7 +615,7 @@
 | :--: | :----: | ------------------------------ |
 | msg  | string | 文字信息 ‘增加成功’ ‘增加失败’ |
 
-#### 15、编辑文章类别
+#### 15、编辑文章类别(未完成)
 
 请求地址：http://localhost:8000/admin/category_edit
 网络地址: https://autumnfish.cn/big/admin/category_edit
@@ -610,7 +636,7 @@
 | :--: | :----: | ------------------------------ |
 | msg  | string | 文字信息 ‘编辑成功’ ‘编辑失败’ |
 
-#### 16、删除文章类别
+#### 16、删除文章类别(未完成)
 
 请求地址：http://localhost:8000/admin/category_delete
 网络地址: https://autumnfish.cn/big/admin/category_delete
@@ -629,7 +655,7 @@
 | :--: | :----: | ------------------------------ |
 | msg  | string | 文字信息 ‘删除成功’ ‘删除失败’ |
 
-#### 17、文章评论搜索
+#### 17、文章评论搜索(未完成)
 
 请求地址：http://localhost:8000/admin/comment_search
 网络地址: https://autumnfish.cn/big/admin/comment_search
@@ -655,7 +681,7 @@
 |  date   | string | 评论发表时间             |
 |  state  | string | 评论状态 ‘批准’ ‘待审核’ |
 
-#### 18、评论审核通过
+#### 18、评论审核通过(未完成)
 
 请求地址：http://localhost:8000/admin/comment_pass
 网络地址: https://autumnfish.cn/big/admin/comment_pass
@@ -674,7 +700,7 @@
 | :--: | :----: | ------------------------------ |
 | msg  | string | 文字信息 ‘设置成功’ ‘设置失败’ |
 
-#### 19、评论审核不通过
+#### 19、评论审核不通过(未完成)
 
 请求地址：http://localhost:8000/admin/comment_reject
 网络地址: https://autumnfish.cn/big/admin/comment_reject
@@ -693,7 +719,7 @@
 | :--: | :----: | ------------------------------ |
 | msg  | string | 文字信息 ‘设置成功’ ‘设置失败’ |
 
-#### 20、删除评论
+#### 20、删除评论(未完成)
 
 请求地址：http://localhost:8000/admin/comment_delete
 网络地址: https://autumnfish.cn/big/admin/comment_delete
@@ -712,42 +738,4 @@
 | :--: | :----: | ------------------------------ |
 | msg  | string | 文字信息 ‘删除成功’ ‘删除失败’ |
 
-#### 21、获取用户信息
 
-请求地址：/admin/user/info
-
-请求方式：get
-
-请求参数：无
-
-返回数据：
-
-|   名称   |  类型  | 说明         |
-| :------: | :----: | ------------ |
-| username | string | 用户名称     |
-| nickname | string | 用户昵称     |
-|  email   | string | 用户邮箱     |
-| user_pic | string | 用户图片地址 |
-| password | string | 用户密码     |
-
-#### 22、编辑用户信息
-
-请求地址：/admin/user/info
-
-请求方式：post
-
-请求参数：使用 formdata 提交
-
-|   名称   |  类型  | 说明         |
-| :------: | :----: | ------------ |
-| username | string | 用户名称     |
-| nickname | string | 用户昵称     |
-|  email   | string | 用户邮箱     |
-| user_pic | string | 用户图片地址 |
-| password | string | 用户密码     |
-
-返回数据：
-
-| 名称 |  类型  | 说明                           |
-| :--: | :----: | ------------------------------ |
-| msg  | string | 文字信息 ‘修改成功’ ‘修改失败’ |

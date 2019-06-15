@@ -35,8 +35,15 @@ module.exports = {
   },
   //
   async userinfo_get(req, res) {
-    const result = await userModel.findOne()
-    res.send(result)
+   userModel.userinfo_get({
+     callback(result){
+       res.sendMsg({
+         code:200,
+         msg:'获取成功',
+         data:result[0]
+       })
+     }
+   })
   },
   // post
   userinfo_edit(req, res) {
