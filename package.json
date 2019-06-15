@@ -3,6 +3,15 @@
   "version": "1.0.0",
   "description": "本地基础地址为 http://localhost:8000/\r 网络基础地址为:https://autumnfish.cn/big/admin/",
   "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-validator": "^5.3.1",
+    "morgan": "^1.9.1",
+    "mysql2": "^1.6.5",
+    "sequelize": "^5.8.9"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,11 +25,5 @@
   "bugs": {
     "url": "https://github.com/AutumnFish/bigNewsApi/issues"
   },
-  "homepage": "https://github.com/AutumnFish/bigNewsApi#readme",
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "express-validator": "^5.3.1",
-    "morgan": "^1.9.1"
-  }
+  "homepage": "https://github.com/AutumnFish/bigNewsApi#readme"
 }

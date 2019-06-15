@@ -6,19 +6,22 @@ const userController = require('../controllers/userController')
 const { check, validationResult } = require('express-validator/check')
 // 导入body-parser接收数据
 const bodyParser = require('body-parser')
+// 导入信息提示中间件
+const message = require('../middle/message')
 // 创建路由对象
 const router = express.Router()
 // 注册post数据接收中间件
 router.use(bodyParser.urlencoded({ extended: false }))
-
+// 注册信息提示中间件
+router.use(message)
 // 注册路由
 router.post(
   '/login',
   [
     // username must be an email
-    check('user_name')
+    check('username')
       .isString()
-      .isLength({ min: 6 }),
+      .isLength({ min: 4 }),
     // password must be at least 5 chars long
     check('password').isLength({ min: 6 })
   ],
@@ -27,7 +30,7 @@ router.post(
     if (!errors.isEmpty()) {
       return res.send({
         code:422,
-        msg:'用户名或密码格式对不对，请检查'
+        msg:'用户名或密码格式不对，请检查'
       })
     }
     next()
