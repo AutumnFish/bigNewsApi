@@ -10,7 +10,7 @@ module.exports = {
       password,
       callback(result) {
         console.log(result)
-        let code, msg, data
+        let code, msg
         if (result) {
           code = 200
           msg = '登录成功'

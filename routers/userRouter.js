@@ -14,7 +14,7 @@ const router = express.Router()
 router.use(bodyParser.urlencoded({ extended: false }))
 // 注册信息提示中间件
 router.use(message)
-// 注册路由
+// 路由 - 用户登录
 router.post(
   '/login',
   [
@@ -37,6 +37,8 @@ router.post(
   },
   userController.login
 )
+
+// 路由 - 用户登出
 router.get('/logout', userController.logout)
 router.get('/info', userController.userinfo_get)
 router.post('/info', userController.userinfo_edit)
