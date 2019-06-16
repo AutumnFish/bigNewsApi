@@ -18,8 +18,8 @@ module.exports = {
   },
   userinfo_get({ callback }) {
     execute(
-      'SELECT * FROM `users` WHERE `username` = ? AND `password` = ?',
-      ['admin', '123456'],
+      'SELECT * FROM `users` WHERE id=?',
+      ['1'],
       callback
     )
   },

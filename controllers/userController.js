@@ -39,6 +39,8 @@ module.exports = {
   async userinfo_get(req, res) {
     userModel.userinfo_get({
       callback(result) {
+        // console.log(result)
+        result[0].user_pic = `${config.baseURL}/uploads/${result[0].user_pic}`
         res.sendMsg({
           code: 200,
           msg: '获取成功',
@@ -51,7 +53,7 @@ module.exports = {
   userinfo_edit(req, res) {
     // console.log(req.file);
     const { username, nickname, email, password } = req.body
-    let user_pic 
+    let user_pic
     try {
       const { filename, size, mimetype } = req.file
       if (size > 1024 * 1024 * 2) {
@@ -68,15 +70,25 @@ module.exports = {
           msg: '文件类型不对'
         })
       }
-      user_pic = `${config.baseURL}/uploads/${filename}`
+      user_pic = filename
     } catch (error) {
       return res.sendMsg({
-        code:400,
-        msg:'user_pic 传递错误请检查'
+        code: 400,
+        msg: 'user_pic 传递错误请检查'
       })
     }
-   
-    // 获取用户信息
+    // 删除之前的文件
+    userModel.userinfo_get({
+      callback(result) {
+        try {
+          fs.unlinkSync(path.join(__dirname, '../static/uploads', result[0].user_pic))
+        } catch (error) {
+          console.log('unlink Error');
+        }
+      }
+    })
+
+    // 修改用户信息
     userModel.userinfo_edit({
       username,
       nickname,
