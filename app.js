@@ -9,6 +9,9 @@ const morgan = require('morgan')
 const cors = require('cors')
 const app = express()
 
+// 暴露静态资源
+app.use(express.static('static'))
+
 // 允许跨域
 app.use(cors())
 // 打印日志

@@ -4,5 +4,6 @@ module.exports = {
   username:'root',
   password:'root',
   host:'localhost',
+  baseURL:"http://localhost:8000"
   
 }
