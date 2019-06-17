@@ -21,6 +21,10 @@ app.use(
   '/admin/user',
   require('./routers/userRouter')
 )
+app.use(
+  '/admin/article',
+  require('./routers/articleRouter')
+)
 
 app.listen(config.port, () => {
   console.log('success')

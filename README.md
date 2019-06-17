@@ -312,7 +312,7 @@
 | all_count | number | 文章总数             |
 | day_count | number | 当天文章发布文章总数 |
 
-#### 5、评论数量统计(未完成)
+#### 6、评论数量统计(未完成)
 
 请求地址：http://localhost:8000/admin/comment_count
 网络地址: https://autumnfish.cn/big/admin/comment_count
@@ -328,7 +328,7 @@
 | all_count | number | 评论总数         |
 | day_count | number | 当天发布评论总数 |
 
-#### 6、月新增文章数(未完成)
+#### 7、月新增文章数(未完成)
 
 请求地址：http://localhost:8000/admin/month_article_count
 网络地址: https://autumnfish.cn/big/admin/month_article_count
@@ -372,7 +372,7 @@
 ]
 ```
 
-#### 7、各类型文章数量统计(未完成)
+#### 8、各类型文章数量统计(未完成)
 
 请求地址：http://localhost:8000/admin/article_category_count
 网络地址: https://autumnfish.cn/big/admin/article_category_count
@@ -388,7 +388,7 @@
 |   type    | string | 文章类型       |
 | all_count | number | 该类型文章总数 |
 
-#### 8、月文章访问量(未完成)
+#### 9、月文章访问量(未完成)
 
 请求地址：http://localhost:8000/admin/article_category_visit
 网络地址: https://autumnfish.cn/big/admin/article_category_visit
@@ -488,10 +488,9 @@
 ]
 ```
 
-#### 9、文章搜索(未完成)
+#### 10、文章搜索(未完成)
 
-请求地址：http://localhost:8000/admin/search
-网络地址: https://autumnfish.cn/big/admin/search
+请求地址：/admin/article/search
 
 请求方式：get
 
@@ -508,11 +507,31 @@
 
 返回数据：
 
-| 名称  |  类型  | 说明                                                                                                                                                                                                                                                                                                                                                                         |
-| :---: | :----: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| pages | number | 总页数                                                                                                                                                                                                                                                                                                                                                                       |
-| page  | number | 当前页                                                                                                                                                                                                                                                                                                                                                                       |
-| data  | array  | 文章数据数组，其中每个成员包含字段：<br />id: number 类型，文章 id<br />title: string 类型，文章标题<br />intro: string 类型，文章文字内容截取<br />cover: string 类型，文章封面图片地址<br />type: string 类型，文章类型<br />read: number 类型，文章阅读次数<br />comment: number 类型，文章评论次数<br />date:string 类型， 文章发布时间<br />state:string 类型，文章状态 |
+| 名称  |  类型  | 说明                                                         |
+| :---: | :----: | ------------------------------------------------------------ |
+| pages | number | 总页数                                                       |
+| page  | number | 当前页                                                       |
+| data  | array  | 文章数据数组，其中每个成员包含字段：<br />id: number 类型，文章 id<br />title: string 类型，文章标题<br />content: string 类型，文章文字内容截取<br />cover: string 类型，文章封面图片地址<br />type: string 类型，文章类型<br />read: number 类型，文章阅读次数<br />comment: number 类型，文章评论次数<br />author: string类型，文章作者<br />date:string 类型， 文章发布时间<br />state:string 类型，文章状态 |
+
+#### 10、根据Id搜索文章
+
+请求地址：/admin/article/searchById
+
+请求方式：get
+
+请求参数：
+
+| 名称 |  类型  | 说明                                        |
+| :--: | :----: | ------------------------------------------- |
+|  id  | number | 文章 id，根据 id 查询时，其余参数可以不选择 |
+
+返回数据：
+
+| 名称 | 类型  | 说明                                                         |
+| :--: | :---: | ------------------------------------------------------------ |
+| data | array | 文章数据数组，其中每个成员包含字段：<br />id: number 类型，文章 id<br />title: string 类型，文章标题<br />intro: string 类型，文章文字内容截取<br />cover: string 类型，文章封面图片地址<br />type: string 类型，文章类型<br />read: number 类型，文章阅读次数<br />comment: number 类型，文章评论次数<br />date:string 类型， 文章发布时间<br />state:string 类型，文章状态 |
+
+#### 1
 
 #### 10、发布文章(未完成)
 
@@ -537,6 +556,8 @@
 | 名称 |  类型  | 说明                           |
 | :--: | :----: | ------------------------------ |
 | msg  | string | 文字信息 ‘发布成功’ ‘发布失败’ |
+
+
 
 #### 11、文章编辑(未完成)
 
