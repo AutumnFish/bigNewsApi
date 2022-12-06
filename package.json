@@ -4,9 +4,9 @@
   "description": "本地基础地址为 http://localhost:8000/\r 网络基础地址为:https://autumnfish.cn/big/admin/",
   "main": "app.js",
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.1",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "express-validator": "^5.3.1",
     "morgan": "^1.9.1",
     "multer": "^1.4.1",
